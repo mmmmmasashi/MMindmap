@@ -17,7 +17,7 @@ namespace MindmapDomainLib.Parser
                 const string header = "# ";
                 if (line.StartsWith(header))
                 {
-                    nodes.Add(new Node(line.Substring(header.Length), 0, 0));
+                    nodes.Add(new TopNode(line.Substring(header.Length)));
                 }
             }
             return nodes;
