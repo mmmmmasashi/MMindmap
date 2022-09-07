@@ -68,5 +68,12 @@ namespace MindmapDomainLibTest
             Assert.Equal(0, nodes[0].Hierarchy);
             Assert.Equal(1, nodes[1].Hierarchy);
         }
+//"# ƒ^ƒCƒgƒ‹",
+//"- ‚ ‚¢‚¤",
+//"    - ABC",
+//"    - DEF",
+//"- ‚¦‚¨",
+//"    - XY",
+//"    - X",
     }
 }
