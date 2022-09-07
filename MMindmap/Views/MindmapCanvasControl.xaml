@@ -1,9 +1,30 @@
 ﻿<UserControl x:Class="MMindmap.Views.MindmapCanvasControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:prism="http://prismlibrary.com/"             
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:view="clr-namespace:MMindmap.Views"
+             xmlns:vm="clr-namespace:MMindmap.ViewModels"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
-        <TextBlock Text="Hello WOrld" FontSize="48"/>
+        <Canvas>
+            <ItemsControl ItemsSource="{Binding Nodes}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type vm:NodeControlViewModel}">
+                        <view:NodeControl />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <Setter Property="Canvas.Left" Value="{Binding Left, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding Top, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+            </ItemsControl>
+        </Canvas>
     </Grid>
 </UserControl>
