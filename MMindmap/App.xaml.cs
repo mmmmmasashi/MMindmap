@@ -16,7 +16,7 @@ namespace MMindmap
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterForNavigation<MindmapCanvasControl>();
         }
     }
 }

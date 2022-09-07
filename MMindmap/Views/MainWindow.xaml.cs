@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using MMindmap.ViewModels;
+using System.Windows;
 
 namespace MMindmap.Views
 {
@@ -10,6 +11,12 @@ namespace MMindmap.Views
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void LoadedEvent(object sender, RoutedEventArgs e)
+        {
+            var vm = (MainWindowViewModel)this.DataContext;
+            vm.ShowMindmapCanvasCommand.Execute();
         }
     }
 }

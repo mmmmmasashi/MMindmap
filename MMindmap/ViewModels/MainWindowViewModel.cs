@@ -1,4 +1,7 @@
-﻿using Prism.Mvvm;
+﻿using MMindmap.Views;
+using Prism.Commands;
+using Prism.Mvvm;
+using Prism.Regions;
 
 namespace MMindmap.ViewModels
 {
@@ -11,9 +14,11 @@ namespace MMindmap.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public MainWindowViewModel()
-        {
+        public DelegateCommand ShowMindmapCanvasCommand { get; } 
 
+        public MainWindowViewModel(IRegionManager regionManager)
+        {
+            ShowMindmapCanvasCommand = new DelegateCommand(() => regionManager.RequestNavigate("ContentRegion", nameof(MindmapCanvasControl)));
         }
     }
 }
