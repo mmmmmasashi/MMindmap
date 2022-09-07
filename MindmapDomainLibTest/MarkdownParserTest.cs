@@ -1,19 +1,34 @@
 using MindmapDomainLib.Element;
 using MindmapDomainLib.Parser;
+using System;
+using Xunit;
 
 namespace MindmapDomainLibTest
 {
-    public class MarkdownParserTest
+    public class 見出し1はトップノードTest
     {
-        [Fact]
-        public void Test1()
+        List<INode> nodes;
+        INode node;
+
+        public 見出し1はトップノードTest()
         {
             List<string> lines = new List<string>() { "# タイトル" };
-
             IMarkdownParser parser = new MarkdownParser();
-            List<INode> result = parser.Parse(lines);
-            Assert.Single(result);
-            Assert.Equal("タイトル", result.First().Name);
+            nodes = parser.Parse(lines);
+            node = nodes.First();
+        }
+
+        [Fact]
+        public void 見出し1はノードとして名前が取れる()
+        {
+            Assert.Single(nodes);
+            Assert.Equal("タイトル", nodes.First().Name);
+        }
+
+        [Fact]
+        public void 階層はトップなので0()
+        {
+            Assert.Equal(0, node.Hierarchy);
         }
     }
 }

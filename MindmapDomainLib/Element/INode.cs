@@ -11,6 +11,6 @@ namespace MindmapDomainLib.Element
         string Name { get; }
         double X { get; }
         double Y { get; }
-
+        int Hierarchy { get; }
     }
 }

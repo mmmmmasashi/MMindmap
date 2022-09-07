@@ -14,6 +14,8 @@ namespace MindmapDomainLib.Element
 
         public string Name { get; }
 
+        public int Hierarchy => 0;
+
         public Node(string name, double x, double y)
         {
             X = x;
