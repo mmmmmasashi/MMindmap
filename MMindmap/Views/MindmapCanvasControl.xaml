@@ -9,20 +9,20 @@
     <Grid>
         <Canvas>
             <ItemsControl ItemsSource="{Binding Nodes}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate DataType="{x:Type vm:NodeControlViewModel}">
-                        <view:NodeControl />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <Canvas/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
                 <ItemsControl.ItemContainerStyle>
                     <Style TargetType="ContentPresenter">
-                        <Setter Property="Canvas.Left" Value="{Binding Left, UpdateSourceTrigger=PropertyChanged}"/>
-                        <Setter Property="Canvas.Top" Value="{Binding Top, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Setter Property="Canvas.Left" Value="{Binding X, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Setter Property="Canvas.Top"  Value="{Binding Y, UpdateSourceTrigger=PropertyChanged}"/>
                     </Style>
                 </ItemsControl.ItemContainerStyle>
             </ItemsControl>

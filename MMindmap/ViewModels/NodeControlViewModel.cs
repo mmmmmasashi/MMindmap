@@ -22,13 +22,21 @@ namespace MMindmap.ViewModels
             set { SetProperty(ref _left, value); }
         }
 
+        private string _mainText;
+        public string MainText
+        {
+            get { return _mainText; }
+            set { SetProperty(ref _mainText, value); }
+        }
+
         public NodeControlViewModel()
         {
 
         }
 
-        public NodeControlViewModel(double top, double left)
+        public NodeControlViewModel(string text, double top, double left)
         {
+            this.MainText = text;
             this.Top = top;
             this.Left = left;
         }

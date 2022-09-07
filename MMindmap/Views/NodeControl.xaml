@@ -4,6 +4,6 @@
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
-        <TextBlock Text="Sample Node" FontSize="32"/>
+        <TextBlock Text="{Binding Content}" FontSize="32"/>
     </Grid>
 </UserControl>

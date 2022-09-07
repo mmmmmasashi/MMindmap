@@ -1,7 +1,7 @@
-﻿using MMindmap.Views;
+﻿using MindmapDomainLib.Element;
+using MMindmap.Views;
 using Prism.Ioc;
 using System.Windows;
-
 namespace MMindmap
 {
     /// <summary>
@@ -17,6 +17,7 @@ namespace MMindmap
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<MindmapCanvasControl>();
+            containerRegistry.RegisterInstance<INodeLoader>(new NodeLoader());
         }
     }
 }

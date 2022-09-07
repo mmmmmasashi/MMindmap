@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMindmap", "MMindmap\MMindmap.csproj", "{73203966-71AC-42E1-9A89-1A17DC853608}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindmapDomainLib", "MindmapDomainLib\MindmapDomainLib.csproj", "{00B03B80-86C6-4894-B0A2-94813E49724D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{73203966-71AC-42E1-9A89-1A17DC853608}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73203966-71AC-42E1-9A89-1A17DC853608}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73203966-71AC-42E1-9A89-1A17DC853608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B03B80-86C6-4894-B0A2-94813E49724D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B03B80-86C6-4894-B0A2-94813E49724D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B03B80-86C6-4894-B0A2-94813E49724D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B03B80-86C6-4894-B0A2-94813E49724D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
