@@ -6,6 +6,7 @@
              xmlns:vm="clr-namespace:MMindmap.ViewModels"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <!--参考:https://www.nabehiro.net/2021/10/wpf-prism-dynamic-usercontrol.html-->
+    <!--参考:http://my-clip-devdiary.blogspot.com/2011/01/canvasbinding.html-->
     <Grid>
         <Canvas>
             <ItemsControl ItemsSource="{Binding Nodes}">
