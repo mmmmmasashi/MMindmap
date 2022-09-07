@@ -15,9 +15,13 @@ namespace MindmapDomainLib.Parser
             foreach (var line in lines)
             {
                 const string header = "# ";
-                if (line.StartsWith(header))
+                if (line.StartsWith("# "))
                 {
-                    nodes.Add(new TopNode(line.Substring(header.Length)));
+                    nodes.Add(new TopNode(line.Substring(2)));
+                }
+                else if (line.StartsWith("- "))
+                {
+                    nodes.Add(new NormalNode(line.Substring(2)));
                 }
             }
             return nodes;
